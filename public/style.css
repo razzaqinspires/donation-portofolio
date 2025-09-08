@@ -109,6 +109,10 @@ header nav {
     text-decoration: none;
     font-weight: 500;
     transition: transform var(--transition-smooth), background-color var(--transition-smooth);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1rem;
 }
 
 .button.primary {
@@ -134,7 +138,6 @@ header nav {
     transform: translateY(-3px);
 }
 
-
 /* --- GENERAL SECTION STYLING --- */
 section {
     padding: 6rem 0;
@@ -153,7 +156,6 @@ section > .container > p {
     text-align: center;
     color: var(--color-secondary);
 }
-
 
 /* --- PROJECTS CAROUSEL --- */
 .carousel-container {
@@ -221,7 +223,6 @@ section > .container > p {
     content: ' →';
 }
 
-
 /* --- DEMO SECTION --- */
 .demo-box {
     background-color: var(--color-surface);
@@ -230,7 +231,6 @@ section > .container > p {
     padding: 4rem;
     text-align: center;
 }
-
 
 /* --- ROADMAP SECTION --- */
 .roadmap-phases {
@@ -340,4 +340,96 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* --- MODAL STYLES --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.modal-content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform var(--transition-smooth);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-content p {
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+#submit-form-button {
+    width: 100%;
+}
+
+.qris-image {
+    display: block;
+    max-width: 250px;
+    margin: 1rem auto;
+    border-radius: 16px;
+    border: 2px solid var(--color-accent);
+}
+
+.small-text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
