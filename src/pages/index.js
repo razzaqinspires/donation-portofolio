@@ -119,7 +119,43 @@ export default function Home() {
                     <section id="roadmap" className="container">
                         <h2>Peta Jalan Misi</h2>
                         <p>Dukungan Anda mengakselerasi setiap fase dari visi besar ini. Bergabunglah dengan kami dalam perjalanan untuk merealisasikan potensi penuh dari kecerdasan buatan.</p>
-                        <div className="roadmap-phases">{/* Placeholder for roadmap cards */}</div>
+                        <div className="roadmap-phases">
+                            <div className="phase-card">
+                                <div className="phase-header">
+                                    <span className="phase-status in-progress">Fase 1</span>
+                                    <h3>Infrastruktur Komputasi</h3>
+                                </div>
+                                <p className="phase-progress">Terkumpul: Rp 1.500.000 dari Rp 15.000.000</p>
+                                <div className="progress-bar"><div className="progress" style={{width: '10%'}}></div></div>
+                                <ul className="phase-details">
+                                    <li>Pengadaan Workstation NVIDIA RTX 4090</li>
+                                    <li>Sewa Dedicated Server Operasional</li>
+                                </ul>
+                            </div>
+                            <div className="phase-card">
+                                <div className="phase-header">
+                                    <span className="phase-status">Fase 2</span>
+                                    <h3>Laboratorium & Prototyping</h3>
+                                </div>
+                                <p className="phase-progress">Target: Rp 75.000.000</p>
+                                <div className="progress-bar"><div className="progress" style={{width: '0%'}}></div></div>
+                                <ul className="phase-details">
+                                    <li>Akuisisi Lengan Robotik KUKA</li>
+                                    <li>Pengembangan Prototipe Humanoid</li>
+                                </ul>
+                            </div>
+                            <div className="phase-card">
+                                <div className="phase-header">
+                                    <span className="phase-status">Fase 3</span>
+                                    <h3>Pendirian Entitas Legal</h3>
+                                </div>
+                                <p className="phase-progress">Target: Rp 25.000.000</p>
+                                <div className="progress-bar"><div className="progress" style={{width: '0%'}}></div></div>
+                                <ul className="phase-details">
+                                    <li>Mendirikan &quot;Razzaq Dynamics&quot;</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div className="donation-buttons">
                             <button onClick={() => openFormModal('dana')} className="button primary">Donasi via DANA (Isi Form)</button>
                             <button onClick={() => openFormModal('saweria')} className="button secondary">Donasi via Saweria (Isi Form)</button>
