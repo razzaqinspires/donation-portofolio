@@ -5,7 +5,7 @@ Proyek ini adalah _website_ portofolio personal yang menampilkan berbagai proyek
 
 
 
-<a href="https://nama-akun-anda.vercel.app" target="_blank">
+<a href="https://donation-portofolio.vercel.app" target="_blank">
   <img src="https://img.shields.io/badge/Lihat%20Website-Sekarang-blue?style=for-the-badge&logo=vercel" alt="Lihat Website">
 </a>
 
@@ -33,7 +33,7 @@ Website ini dibangun dengan pendekatan sederhana namun profesional, cocok untuk 
 
 1.  **Fork Repositori**: _Fork_ repositori ini ke akun GitHub Anda.
 2.  **Kustomisasi Konten**: Buka _file_ `index.html` dan `style.css` untuk menyesuaikan teks, tautan, dan gaya sesuai keinginan Anda. Ganti `nama-akun-anda` dengan nama pengguna GitHub Anda dan tambahkan tautan proyek Anda sendiri.
-3.  **Unggah QRIS**: Ganti _file_ `public/qris.png` dengan kode QRIS pribadi Anda.
+3.  **Unggah QRIS**: Ganti _file_ `qris.png` dengan gambar kode QRIS pribadi Anda.
 4.  **_Deploy_ ke Vercel**:
     * Masuk ke Vercel dan buat proyek baru.
     * Hubungkan ke repositori GitHub Anda.
@@ -45,7 +45,7 @@ Website ini dibangun dengan pendekatan sederhana namun profesional, cocok untuk 
 
 Jika Anda merasa proyek ini bermanfaat dan ingin mendukung saya, silakan kunjungi halaman donasi di website:
 
-**[Dukung Saya di Website Resmi](https://nama-akun-anda.vercel.app/#donate)**
+**[Dukung Saya di Website Resmi](https://donation-portofolio.vercel.app/#donate)**
 
 ---
 
