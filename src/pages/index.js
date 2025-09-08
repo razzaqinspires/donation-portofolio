@@ -19,7 +19,6 @@ export default function Home() {
         event.preventDefault();
         setFormStatus('Memproses...');
 
-        // Buka link pembayaran SEGERA untuk menghindari pop-up blocker
         if (currentMethod === 'dana') window.open(DANA_LINK, '_blank');
         if (currentMethod === 'saweria') window.open(SAWERIA_LINK, '_blank');
 
@@ -77,11 +76,50 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
+
+                    <section id="projects">
+                        <div className="container">
+                            <h2>Proyek Unggulan</h2>
+                            <div className="carousel-container">
+                                <div className="project-carousel">
+                                    <div className="project-card">
+                                        <div className="card-content">
+                                            <h3>Pushup Counter</h3>
+                                            <p>Analisis gerak real-time menggunakan computer vision. Sebuah studi awal tentang persepsi mesin.</p>
+                                            <a href="https://github.com/razzaqinspires/pushup-counter" target="_blank" rel="noopener noreferrer" className="card-link">Lihat di GitHub</a>
+                                        </div>
+                                    </div>
+                                    <div className="project-card">
+                                        <div className="card-content">
+                                            <h3>Metacognitive Nexus</h3>
+                                            <p>Arsitektur inti dari Kesadaran Buatan. Proyek utama yang sedang dalam pengembangan aktif.</p>
+                                            <a href="https://github.com/razzaqinspires/metacognitive-nexus" target="_blank" rel="noopener noreferrer" className="card-link">Jelajahi Arsitektur</a>
+                                        </div>
+                                    </div>
+                                    <div className="project-card placeholder">
+                                        <div className="card-content">
+                                            <h3>Unit Chimera</h3>
+                                            <p>Antarmuka fisik humanoid untuk interaksi dunia nyata. Tahap riset dan pengembangan.</p>
+                                            <span className="card-link">Segera Hadir</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     
+                    <section id="demo" className="container">
+                        <div className="demo-box">
+                            <h2>Pratinjau Proyek Inti</h2>
+                            <p>Jelajahi arsitektur konseptual dari &quot;Metacognitive Nexus&quot;, fondasi dari Kesadaran Buatan yang sedang kami bangun. Ini adalah *blueprint* dari masa depan.</p>
+                            <a href="https://github.com/razzaqinspires/metacognitive-nexus" target="_blank" rel="noopener noreferrer" className="button secondary">Akses Repositori Inti</a>
+                        </div>
+                    </section>
+
                     <section id="roadmap" className="container">
                         <h2>Peta Jalan Misi</h2>
                         <p>Dukungan Anda mengakselerasi setiap fase dari visi besar ini. Bergabunglah dengan kami dalam perjalanan untuk merealisasikan potensi penuh dari kecerdasan buatan.</p>
-                        <div className="roadmap-phases">{/* Roadmap cards here */}</div>
+                        <div className="roadmap-phases">{/* Placeholder for roadmap cards */}</div>
                         <div className="donation-buttons">
                             <button onClick={() => openFormModal('dana')} className="button primary">Donasi via DANA (Isi Form)</button>
                             <button onClick={() => openFormModal('saweria')} className="button secondary">Donasi via Saweria (Isi Form)</button>
@@ -103,10 +141,9 @@ export default function Home() {
                 </footer>
             </div>
 
-            {/* Modal Donasi via Form */}
             {isFormModalOpen && (
-                <div className="modal-overlay">
-                    <div className="modal-content">
+                <div className="modal-overlay" onClick={() => setFormModalOpen(false)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button onClick={() => setFormModalOpen(false)} className="close-button">&times;</button>
                         <h3>Konfirmasi Donasi</h3>
                         <p>Silakan isi data berikut untuk pencatatan progres misi. Data Anda tidak akan dipublikasikan.</p>
@@ -131,10 +168,9 @@ export default function Home() {
                 </div>
             )}
 
-            {/* Modal Donasi via QRIS */}
             {isQrisModalOpen && (
-                 <div className="modal-overlay">
-                    <div className="modal-content">
+                 <div className="modal-overlay" onClick={() => setQrisModalOpen(false)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <button onClick={() => setQrisModalOpen(false)} className="close-button">&times;</button>
                         <h3>Donasi Cepat via QRIS</h3>
                         <p>Terima kasih. Silakan pindai kode di bawah ini untuk berdonasi secara langsung.</p>
