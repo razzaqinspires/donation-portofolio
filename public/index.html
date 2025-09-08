@@ -44,7 +44,7 @@
                             <div class="card-content">
                                 <h3>Pushup Counter</h3>
                                 <p>Analisis gerak real-time menggunakan computer vision. Sebuah studi awal tentang persepsi mesin.</p>
-                                <a href="https://github.com/razzaqinspires/Pushup-Counter-Python" target="_blank" class="card-link">Lihat di GitHub</a>
+                                <a href="https://github.com/razzaqinspires/pushup-counter" target="_blank" class="card-link">Lihat di GitHub</a>
                             </div>
                         </div>
                         <div class="project-card">
@@ -115,8 +115,8 @@
                 </div>
             </div>
             <div class="donation-buttons">
-                <button data-method="dana" class="button primary donation-button">Donasi via DANA (Isi Form)</button>
-                <button data-method="saweria" class="button secondary donation-button">Donasi via Saweria (Isi Form)</button>
+                <a onclick="openDonationModal('dana', event)" href="https://link.dana.id/minta?full_url=https://qr.dana.id/v1/281012012020063028837582" target="_blank" class="button primary">Donasi via DANA (Isi Form)</a>
+                <a onclick="openDonationModal('saweria', event)" href="https://saweria.co/arzzq" target="_blank" class="button secondary">Donasi via Saweria (Isi Form)</a>
                 <button id="direct-qris-button" class="button secondary">Donasi Cepat via QRIS</button>
             </div>
         </section>
@@ -126,6 +126,7 @@
             <p>Untuk pertanyaan, kolaborasi, atau diskusi lebih lanjut, silakan hubungi kami melalui kanal berikut.</p>
             <a href="https://wa.me/6283193905842" target="_blank" class="button primary">Hubungi via WhatsApp</a>
         </section>
+
     </main>
 
     <footer>
@@ -153,7 +154,7 @@
                     <label for="donation-amount">Jumlah Donasi (Rp)</label>
                     <input type="number" id="donation-amount" name="jumlah" required placeholder="Contoh: 50000">
                 </div>
-                <button type="submit" id="submit-form-button" class="button primary">Lanjut ke Pembayaran</button>
+                <button type="submit" id="submit-form-button" class="button primary">Kirim Data & Lanjutkan</button>
             </form>
         </div>
     </div>
