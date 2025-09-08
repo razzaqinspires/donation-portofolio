@@ -29,6 +29,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+    transition: transform var(--transition-smooth), filter var(--transition-smooth);
+}
+
+body.modal-active main {
+    transform: scale(0.98);
+    filter: blur(5px);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -351,7 +360,7 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
-    display: none; /* Initially hidden */
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 2000;
