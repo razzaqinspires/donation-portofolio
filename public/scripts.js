@@ -71,15 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                handlePaymentStep();
+                submitButton.textContent = 'Data Diterima! Mengalihkan...';
+                setTimeout(handlePaymentStep, 1000); // Jeda singkat untuk umpan balik
             } else {
                 throw new Error('Gagal mengirim data. Silakan coba lagi.');
             }
         } catch (error) {
             alert(error.message);
         } finally {
-            submitButton.textContent = 'Lanjut ke Pembayaran';
-            submitButton.disabled = false;
+            // Pengaturan ulang tombol akan ditangani setelah pengalihan
         }
     });
 
@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         closeModal(formModalOverlay, formModalContent);
         donationForm.reset();
+        const submitButton = document.getElementById('submit-form-button');
+        submitButton.textContent = 'Kirim Data & Lanjutkan';
+        submitButton.disabled = false;
     }
 
     // --- LOGIKA UNTUK MODAL QRIS LANGSUNG ---
